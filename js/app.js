@@ -36,6 +36,7 @@ function updatePage(cursorPosition) {
 };
 
 updatePage(0);
+
 /*// ✅ Démarrer l'animation dès le chargement de la page
 window.addEventListener("load", () => {
     updatePage(window.innerWidth / 2); // Position initiale au centre
@@ -49,26 +50,29 @@ window.addEventListener("mousemove", (e) => {
 
     rotateDegree = (xValue / (window.innerWidth / 2)) * 20;
     // console.log(rotateDegree);
-    updatePage(e.clientX)
+    updatePage(e.clientX);
 
 
 });
 
 /*GSAP Animaion*/
 
-let timeline = gsap.to();
+let timeline = gsap.timeline();
 
 Array.from(animation_element)
-.filter(el => !el.classList.contains("text"))
-.forEach(el => {
-    timeline.from(
-        el,
-        {
-            //top:"0px",
-            top: `${el.offsetHeight / 2 + +el.dataset.distance}px`,
-            duration: 3.5,
-            ease: "power3.out"
-        },
-        "1"
-    );
-});
+    .filter((el) => !el.classList.contains("text"))
+    .forEach((el) => {
+        timeline.from(
+            el,
+            {
+                //top:"0px",
+                top: `${el.offsetHeight / 2 + +(el.dataset.distance)}px`,
+                duration: 3.5,
+                ease: "power3.out",
+            },
+            "1"
+        );
+
+    });
+
+

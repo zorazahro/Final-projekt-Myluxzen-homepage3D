@@ -138,7 +138,13 @@ main {
 
 
 }
+.wrapper{
+    height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
 
+}
 
 .bg-img {
     position: absolute;
@@ -252,7 +258,7 @@ main {
 .text {
     position: absolute;
     z-index: 9;
-    top: 36.72%; /* (50% - 130px) / 1024px */
+    top: 30%; /* (50% - 130px) / 1024px */
     left: 50%;
     text-align: center;
     text-transform: uppercase;
@@ -272,7 +278,7 @@ main {
 
 .text h1 {
     font-weight: 800;
-    font-size: 8rem;
+    font-size: 10rem;
     line-height: 0.88;
     color: #e8c791;
     color: #116769;
@@ -436,6 +442,13 @@ main {
     pointer-events: none;
 }*/
 @media (max-width: 1700px) {
+    .text h1 {
+        font-size: 8rem;
+    }
+
+    .text h2 {
+        font-size: 4rem;
+    }
     
     .bg-img{
         /*width: initial;*/
@@ -524,10 +537,7 @@ main {
      .mountain-1 {
         /* height: initial;*/
          height: 120%;
-         
-     }
-
-
+         bg-img
 
 }
 
@@ -574,7 +584,10 @@ main {
         padding: 0 0.9rem;
     }
 
-    .login {}
+    .login {
+        font-size: 0.85rem;
+        padding: 0 1.8rem;
+    }
 
     .hamburger {
         padding-left: 0.9rem;

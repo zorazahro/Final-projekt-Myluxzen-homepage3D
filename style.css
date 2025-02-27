@@ -139,7 +139,7 @@ main {
 
 }
 .wrapper{
-    height: 100vh;
+   
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
@@ -537,8 +537,9 @@ main {
      .mountain-1 {
         /* height: initial;*/
          height: 120%;
-         bg-img
+         
 
+}
 }
 
 @media (max-width: 1100px) {
